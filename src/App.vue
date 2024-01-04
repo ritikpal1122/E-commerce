@@ -1,19 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <BuyPage/>
+    <HomePage/>
+    <ItemCart/> -->
+    <!-- <LoginPage/> -->
+    <router-view></router-view>
+    <!-- <router-view @add-to-cart="addToCart" />
+    <NavBar :cartCount="cartCount" /> -->
+
+    <!-- <NavBar/>
+    <PaymentOption/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import BuyPage from './components/BuyPage.vue';
+// import HomePage from './components/HomePage.vue';
+// import ItemCart from './components/ItemCart.vue';
+// import LoginPage from './components/LoginPage.vue';
+// import NavBar from './components/NavBar.vue';
+// import PaymentOption from './components/PaymentOption.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // BuyPage,
+    // HomePage,
+    // ItemCart,
+    // LoginPage,
+    // NavBar,
+    // PaymentOption
+  },
+  data() {
+    return {
+      cartCount: 0,
+    };
+  },
+  methods: {
+    addToCart() {
+      this.cartCount++;
+    },
+  },
+};
 </script>
 
 <style>
