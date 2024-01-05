@@ -30,20 +30,47 @@
 
       <div class="payment-info" v-if="showPaymentInfo">
         <h2>Enter {{ selectedPayment }} Information</h2>
-        <div v-if="['Credit Card', 'Debit Card'].includes(selectedPayment)" class="card-details">
+        <div
+          v-if="['Credit Card', 'Debit Card'].includes(selectedPayment)"
+          class="card-details"
+        >
           <label class="card-type-label">Card Type:</label>
           <div class="card-type-options">
-            <input type="radio" id="visa" value="Visa" v-model="cardInfo.cardType" />
+            <input
+              type="radio"
+              id="visa"
+              value="Visa"
+              v-model="cardInfo.cardType"
+            />
             <label for="visa">Visa</label>
 
-            <input type="radio" id="mastercard" value="Mastercard" v-model="cardInfo.cardType" />
+            <input
+              type="radio"
+              id="mastercard"
+              value="Mastercard"
+              v-model="cardInfo.cardType"
+            />
             <label for="mastercard">Mastercard</label>
           </div>
 
-          <input type="text" placeholder="Card Number" v-model="cardInfo.cardNumber" @input="validateCardNumber" />
-          <input type="text" placeholder="Expiration Date (MM/YY)" v-model="cardInfo.expiryDate"
-            @input="validateExpiryDate" />
-          <input type="text" placeholder="CVV" v-model="cardInfo.cvv" @input="validateCVV" />
+          <input
+            type="text"
+            placeholder="Card Number"
+            v-model="cardInfo.cardNumber"
+            @input="validateCardNumber"
+          />
+          <input
+            type="text"
+            placeholder="Expiration Date (MM/YY)"
+            v-model="cardInfo.expiryDate"
+            @input="validateExpiryDate"
+          />
+          <input
+            type="text"
+            placeholder="CVV"
+            v-model="cardInfo.cvv"
+            @input="validateCVV"
+          />
 
           <p v-if="cardNumberError" class="error-message">
             {{ cardNumberError }}
@@ -112,15 +139,12 @@ export default {
       }, 3000);
     },
     validateCardNumber() {
-      // Placeholder for validation logic
       this.cardNumberError = "";
     },
     validateExpiryDate() {
-      // Placeholder for validation logic
       this.expiryDateError = "";
     },
     validateCVV() {
-      // Placeholder for validation logic
       this.cvvError = "";
     },
   },

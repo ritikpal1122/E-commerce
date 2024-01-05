@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Sidebar Section -->
+    
     </div>
     <FooterPage/>
   </div>
@@ -182,20 +182,20 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensure it stays above other elements */
+  z-index: 1000; 
 }
 .item-card-wrapper {
   flex: 0 0 calc(33.333% - 20px);
   margin-bottom: 20px;
-  border: 1px solid #e0e0e0; /* Add border around the item card */
-  border-radius: 8px; /* Add rounded corners to the item card */
-  overflow: hidden; /* Hide any content that might overflow the item card */
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .item-card-wrapper img {
-  width: 100%; /* Make sure the image takes up the full width of its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto;
   border-radius: 5px;
 }
 
@@ -206,25 +206,25 @@ export default {
 }
 @media (min-width: 1200px) { 
   .item-card-wrapper {
-    flex: 0 0 calc(20% - 20px); /* 20% width for 5 items in a row with 20px spacing */
+    flex: 0 0 calc(20% - 20px);
   }
 }
 
 @media (max-width: 1200px) and (min-width: 769px) {
   .item-card-wrapper {
-    flex: 0 0 calc(25% - 20px); /* 25% width for 4 items in a row with 20px spacing */
+    flex: 0 0 calc(25% - 20px); 
   }
 }
 
 @media (max-width: 768px) and (min-width: 481px) {
   .item-card-wrapper {
-    flex: 0 0 calc(33.333% - 20px); /* 33.333% width for 3 items in a row with 20px spacing */
+    flex: 0 0 calc(33.333% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .item-card-wrapper {
-    flex: 0 0 calc(50% - 20px); /* 50% width for 2 items in a row with 20px spacing */
+    flex: 0 0 calc(50% - 20px); 
   }
 }
 

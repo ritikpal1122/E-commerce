@@ -15,6 +15,37 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+      showMessage: false
+    };
+  },
+  methods: {
+    login() {
+      if (this.username === "username" && this.password === "password") {
+        this.$router.push("/home");
+      } else {
+        this.showMessage = true;
+        setTimeout(() => {
+          this.showMessage = false;
+        }, 3000); 
+      }
+    },
+    navigateToSignup() {
+      this.$router.push("/signup"); 
+    },
+    navigateToForgotPassword() {
+      this.$router.push("/forgot-password"); 
+    }
+  }
+};
+</script>
+
+
 <style scoped>
 .login-container {
   max-width: 400px;
@@ -93,33 +124,3 @@
   color: #0056b3;
 }
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      username: "",
-      password: "",
-      showMessage: false
-    };
-  },
-  methods: {
-    login() {
-      if (this.username === "username" && this.password === "password") {
-        this.$router.push("/home");
-      } else {
-        this.showMessage = true;
-        setTimeout(() => {
-          this.showMessage = false;
-        }, 3000); 
-      }
-    },
-    navigateToSignup() {
-      this.$router.push("/signup"); 
-    },
-    navigateToForgotPassword() {
-      this.$router.push("/forgot-password"); 
-    }
-  }
-};
-</script>
